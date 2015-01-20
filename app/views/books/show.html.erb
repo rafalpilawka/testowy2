@@ -1,0 +1,12 @@
+<h1>
+	My title is <%= @book.title%>
+	I have <%= @book.pages %> pages
+	My author is <%= !@book.author.nil? ? @book.author.name : "brak" %>
+</h1>
+
+<h1>
+	Im available at : <%= !@book.labels.nil? ? @book.labels.map(&:name).join(" , ") : "brak" %>
+
+</h1>
+
+<div><%=render :partial => "form"%></div>

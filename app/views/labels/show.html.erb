@@ -1,0 +1,35 @@
+<h1 >
+hello from <%= @label.name %>
+We are from <%= @label.country %> Old
+
+<h2>
+We published:
+</h2>
+<ol>
+<%= !@label.books.nil? ? @label.books.map(&:title).join(", ") : "brak" %>
+</ol>
+
+
+
+
+
+
+<ol><%= render :partial=> "label" , :collection=> @labels %>
+</ol>
+<div><%= render :partial=> "form"%></div>
+	
+
+<ul id="menu">
+<li><%##= link_to "edit", edit_teacher_url(@teacher)%></li>
+<li><%#= link_to "powrot", teachers_url(@teacher)%></li>
+<li><%#= link_to "Tancerze" , dancers_url%></li>
+<li><%#= link_to "Uczniowie" , pupils_url(:s=> @teacher)%></li>
+<li><%#= link_to "usun" , teacher_url(@teacher) , :method=>"delete"%></li>
+</ul> 
+Wybierz jedna z opcji dostepnych powyzej
+<hr>
+<%= link_to 'usun', label_url(@label) , :method=>'delete' %>
+<li>
+<%= link_to 'ksiazki' , books_url(:p=>@label)%>
+</li>
+</h1>

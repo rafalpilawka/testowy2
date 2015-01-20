@@ -1,0 +1,13 @@
+<%= form_for(@book) do |f| %>
+<%#= f.error_messages %>
+<%= f.label :title , "Title"%>
+<%= f.text_field :title %>
+<%= f.label :pages , "pages"%>
+<%= f.text_field :pages %>
+<%= f.label :label_ids , "wydawnictwo"%>
+<%= f.select(:label_ids, Label.all.collect{|p| [p.name , p.id]} , {} , {:multiple=>true}) %>
+<%= f.label :author %>
+<%= f.select(:author_id , Author.all.collect{|p| [p.name , p.id]}) %>
+<%#= f.select(:place_id , Place.all.collect{|c| [c.city , c.id]})%>
+<%= f.submit %>
+<% end %>

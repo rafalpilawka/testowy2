@@ -1,0 +1,12 @@
+<%= form_for(@author) do |f| %>
+<%#= f.error_messages %>
+<%= f.label :name , "Name"%>
+<%= f.text_field :name %>
+<%= f.label :age , "age"%>
+<%= f.text_field :age %>
+<%= f.label :country , "kraj pochodzenia"%>
+<%= f.text_field :country %>
+<%#= f.select(:teacher_ids , Teacher.all.collect{|p| [p.name , p.id]} , {} , {:multiple=> true}) %>
+<%#= f.select(:place_id , Place.all.collect{|c| [c.city , c.id]})%>
+<%= f.submit %>
+<% end %>

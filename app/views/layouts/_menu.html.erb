@@ -1,0 +1,37 @@
+<head>
+<style>
+ul#menu {
+    padding: 0;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: orange;
+
+}
+ul#menu {text-align: center;}
+</style>
+</head>
+<h1 style="text-align:center ; color:white">Baza danych 
+posiadanych ksiazek</h1>
+
+
+<ul id="menu" ; class="nav navbar-nav pull-right">
+<li><%= link_to "authors", authors_url%>
+
+</li>
+<li><%=link_to "books" ,  books_url%></li>
+<li><%= link_to "labels" , labels_url%></li>
+</ul>
+
