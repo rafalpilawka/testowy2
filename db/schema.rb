@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123084838) do
+ActiveRecord::Schema.define(version: 20150123085322) do
 
   create_table "aliases", force: true do |t|
     t.integer  "author_id"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20150123084838) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "country"
+  end
+
+  create_table "book_translators", force: true do |t|
+    t.integer  "book_id"
+    t.integer  "translator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 # Could not dump table "books" because of following NoMethodError
