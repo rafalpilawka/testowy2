@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123080605) do
+ActiveRecord::Schema.define(version: 20150123082924) do
 
   create_table "aliases", force: true do |t|
     t.integer  "author_id"
@@ -54,9 +54,15 @@ ActiveRecord::Schema.define(version: 20150123080605) do
     t.datetime "updated_at"
   end
 
+  create_table "locale_translators", force: true do |t|
+    t.integer  "locale_id"
+    t.integer  "translator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "locales", force: true do |t|
     t.string   "lang"
-    t.integer  "book_id"
     t.integer  "translator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
