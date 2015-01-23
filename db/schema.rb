@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123082924) do
+ActiveRecord::Schema.define(version: 20150123084359) do
 
   create_table "aliases", force: true do |t|
     t.integer  "author_id"
