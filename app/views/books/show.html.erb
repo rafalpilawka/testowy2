@@ -5,7 +5,8 @@
 </h1>
 
 <h1>
-	Im available at : <%= !@book.labels.nil? ? @book.labels.map(&:name).join(" , ") : "brak" %>
+	Im available at : <%= !@book.labels.nil? ? @book.labels.map(&:name).join(" , ") : "brak" %></p>
+	I have some translations by: <%= !@book.translators.nil? ? @book.translators.map(&:name).join(" , ") : "jeszcze nie"%></p>
 
 </h1>
 

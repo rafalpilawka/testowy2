@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :books
   resources :labels
   resources :authors
+  resources :translators
+  resources :locales
+  resources :contracts
+  resources :translations
   root "home#index"
 
 
