@@ -27,6 +27,15 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 
+group :assets do 
+
+
+	gem 'therubyracer'
+	gem 'less-rails'
+	gem 'twitter-bootstrap-rails'	
+
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
