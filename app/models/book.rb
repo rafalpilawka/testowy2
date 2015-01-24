@@ -6,6 +6,7 @@ class Book < ActiveRecord::Base
 	has_many :labels ,  :through => :contracts
 	has_many :translations
 	has_many :translators ,  :through => :translations
+	has_many :comments , :as=>:commentable
 	#belongs_to :books_labels
 	belongs_to :author
 	#has_and_belongs_to_many :labels
