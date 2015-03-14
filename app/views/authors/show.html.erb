@@ -17,7 +17,7 @@ Im <%= @author.age %> Old
 <li><%##= link_to "edit", edit_teacher_url(@teacher)%></li>
 <li><%#= link_to "powrot", teachers_url(@teacher)%></li>
 <li><%#= link_to "Tancerze" , dancers_url%></li>
-<li><%#= link_to "Uczniowie" , pupils_url(:s=> @teacher)%></li>
-<li><%#= link_to "usun" , teacher_url(@teacher) , :method=>"delete"%></li>
+<li><%= link_to "Ksiazki" , books_url(:s=>@books)%></li>
+<li><%= link_to "usun" , author_url(@author) , :method=>"delete"%></li>
 </ul> 
 Wybierz jedna z opcji dostepnych powyzej

@@ -29,7 +29,8 @@ gem 'devise'
 
 gem 'therubyracer'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'	
+gem 'twitter-bootstrap-rails'
+gem 'pg'	
 
 
 

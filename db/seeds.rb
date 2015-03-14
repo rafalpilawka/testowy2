@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+book_list = [
+  "Solaris","Idiota","Zbrodnia i kara","Blender foundation"
+	]
+
+book_list.each do |title|
+  Book.create(title: title)
+end	
+	
+author_list = [
+	["Spinoza","45"],
+	["Dawkings","67"],
+	["Sokrates", "50"]
+				]			
+
+author_list.each do |name,age|
+	Author.create(name: name , age: age)
+end

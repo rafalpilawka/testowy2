@@ -21,18 +21,22 @@ class Book < ActiveRecord::Base
 	#belongs_to :labels
 	
 
-	validates :title , :presence=>true
+	validates :title , :presence=>true 
 	validates :pages ,:numericality=>{:greater_than=>10}
+
 	
 	def self.filter(params)
 		Rails.logger.info "*** #{params}"
-		if  params["p"].blank?
+		if  params[ "s"].blank?
 			all
-		else 
-	 		if params["p"]
-				joins(:books).where("label_id=?" , params["p"])
-			end
-
+		#else 
+	 	#	if params["p"]
+		#		joins(:books).where("label_id=?" , params["p"])
+		#	end
+		else
+			if params["s"]
+				joins(:books).where("author_id=?" , params["s"])
+		end
 		end
 
 	end
